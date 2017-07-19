@@ -15,7 +15,8 @@ class Student(Base):
     name = Column(String)
 
     def __repr__(self):
-    	return '<Student(name = %r)>' % (self.name)
+    	return '<Student(name = %r)>' %\
+    	 (self.name)
     
 engine = create_engine('sqlite:///intro.db')
 

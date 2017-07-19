@@ -17,4 +17,5 @@ session = DBSession()
 students = session.query(Student).all()
 for student in students:
 	print("primary key:", student.id, 
-		"name:", student.name, "\n", student)
+		"name:", student.name, "\n",
+		"object:", student)
