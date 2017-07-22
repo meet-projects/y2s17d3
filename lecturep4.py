@@ -5,7 +5,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 
-engine = create_engine('sqlite:///intro.db')
+engine = create_engine('sqlite:///lecture.db')
 Base.metadata.bind = engine
 
 

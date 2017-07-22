@@ -18,7 +18,7 @@
 
 
 
-# ## Extra: Use the animal table as a base class to make tables for 
+# ## Extra 1: Use the animal table as a base class to make tables for 
 # ## the 10 animals you added. 
 # ## Hint: For each animal, what are some columns you would add
 # ## that other animals don't share?

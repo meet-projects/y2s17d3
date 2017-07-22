@@ -1,9 +1,8 @@
 from sqlalchemy import create_engine
-## Inserting into database
 from sqlalchemy.orm import sessionmaker
  
 from lecturep2 import Base, Student
-engine = create_engine('sqlite:///intro.db')
+engine = create_engine('sqlite:///lecture.db')
 # Bind the engine to the metadata of the Base class so that the
 # declaratives can be accessed through a DBSession instance
 Base.metadata.bind = engine
@@ -19,17 +18,19 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
  
 # Insert a Student into the student table
-student_1 = Student(name='Best Student')
-session.add(student_1)
+# student_1 = Student(name='Best Student')
+# session.add(student_1)
+# session.commit()
 
-session.commit()
-
-# ## Part 1: Add 4 students to the student table.
+# ## Part 1: Add the students in your group to the student table.
 # ## relevant commands: add(STUDENT_INSTANCE)
 # ## STUDENT_INSTANCE = Student(WHAT GOES IN HERE?)
-
 # ## HINT: Don't forget to commit after you've added the 4 students.
- 
-# ## Part 2: Edit 2 student's name's to "Jack", and "Jill"
 
-# ## Part 3: Delete 2 students from the student table.
+group = ["Avital", "Helen", "Orhan", "Bassil", "Matt" ]
+
+for student in group:
+	session.add(Student(name = student))
+
+session.commit() 
+

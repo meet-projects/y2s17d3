@@ -8,8 +8,6 @@ from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
 
-#PLACE YOUR TABLE SETUP INFORMATION HERE
-
 class Building(Base):
     __tablename__ = 'building'
     id = Column(Integer, primary_key=True)
