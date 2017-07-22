@@ -16,7 +16,7 @@ class Student(Base):
     	return '<Student(name = %r)>' %\
     	 (self.name)
     
-engine = create_engine('sqlite:///intro.db')
+engine = create_engine('sqlite:///lecture.db')
 
 Base.metadata.create_all(engine)
 
