@@ -23,3 +23,5 @@ class Student:
 		else:
 			self.focus = True
 			return "Student is now focused"
+
+			

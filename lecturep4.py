@@ -1,6 +1,6 @@
 ## Querying the database
 
-from lab2 import Base, Student
+from lecturep2 import Base, Student
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
@@ -13,9 +13,10 @@ DBSession = sessionmaker()
 DBSession.bind = engine
 session = DBSession()
 
-# Make a query to find all Students in the database
+# ## Part 1: Make a query to find all Students in the table
 students = session.query(Student).all()
 for student in students:
 	print("primary key:", student.id, 
 		"name:", student.name, "\n",
 		"object:", student)
+	
