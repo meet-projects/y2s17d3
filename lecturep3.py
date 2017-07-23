@@ -17,9 +17,10 @@ DBSession = sessionmaker(bind=engine)
 # session.rollback()
 session = DBSession()
  
-# Insert a Student into the student table
-# student_1 = Student(name='Best Student')
-# session.add(student_1)
+
+# ## Part 1: Add a Student into the student table
+student_1 = Student(name='Best Student')
+session.add(student_1)
 # session.commit()
 
 # ## Part 1: Add the students in your group to the student table.
@@ -27,10 +28,10 @@ session = DBSession()
 # ## STUDENT_INSTANCE = Student(WHAT GOES IN HERE?)
 # ## HINT: Don't forget to commit after you've added the 4 students.
 
-group = ["Avital", "Helen", "Orhan", "Bassil", "Matt" ]
+group = {"Avital": True, "Helen": True, "Orhan": False, "Bassil": False, "Matt": True}
 
 for student in group:
-	session.add(Student(name = student))
+	session.add(Student(name = student, year = 2, finished_lab = group[student]))
 
 session.commit() 
 

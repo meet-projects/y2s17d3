@@ -1,6 +1,6 @@
 ## Declaring the database
 
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, Boolean
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
@@ -11,6 +11,8 @@ class Student(Base):
     __tablename__ = 'student'
     id = Column(Integer, primary_key=True)
     name = Column(String)
+    year = Column(Integer)
+    finished_lab = Column(Boolean)
 
     def __repr__(self):
     	return '<Student(name = %r)>' %\
