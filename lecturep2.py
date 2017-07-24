@@ -15,8 +15,8 @@ class Student(Base):
     finished_lab = Column(Boolean)
 
     def __repr__(self):
-    	return '<Student(name = %r)>' %\
-    	 (self.name)
+    	return '<Student(primary_key =%s, name = %s, year = %s, finished_lab = %s)>' % (
+        self.id, self.name, self.year, self.finished_lab)
     
 engine = create_engine('sqlite:///lecture.db')
 

@@ -1,4 +1,0 @@
-## Relationships
-
-## One-to-One
-

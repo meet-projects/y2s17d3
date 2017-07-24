@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
  
+from helpers import display_students
 from lecturep2 import Base, Student
 engine = create_engine('sqlite:///lecture.db')
 # Bind the engine to the metadata of the Base class so that the
@@ -19,19 +20,12 @@ session = DBSession()
  
 
 # ## Part 1: Add a Student into the student table
-student_1 = Student(name='Best Student')
-session.add(student_1)
-# session.commit()
+# HINT: it is very similar to lab1 and don't forget to commit
+# ADD CODE HERE 
 
-# ## Part 1: Add the students in your group to the student table.
-# ## relevant commands: add(STUDENT_INSTANCE)
-# ## STUDENT_INSTANCE = Student(WHAT GOES IN HERE?)
-# ## HINT: Don't forget to commit after you've added the 4 students.
 
-group = {"Avital": True, "Helen": True, "Orhan": False, "Bassil": False, "Matt": True}
+# ## Part 2: Add two more students to the student table.
+# HINT: it is very similar to lab1 and don't forget to commit
+# ADD CODE HERE
 
-for student in group:
-	session.add(Student(name = student, year = 2, finished_lab = group[student]))
-
-session.commit() 
-
+display_students()

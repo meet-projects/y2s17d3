@@ -1,46 +1,28 @@
 ## Querying the database
-
-from lecturep2 import Base, Student
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+from lecturep2 import Base, Student
 
 engine = create_engine('sqlite:///lecture.db')
 Base.metadata.bind = engine
 
-
-DBSession = sessionmaker()
-DBSession.bind = engine
+DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
+
 # ## Part 1: Make a query to find all Students in the table
+def show_all_the_students():
+  students = # QUERY GOES HERE
 
-# students = session.query(Student).all()
-
-# for student in students:
-# 		print("PRIMARY_KEY:", student.id, "\n",
-# 		"name:", student.name, "\n",
-# 		"year:", student.year, "\n",
-# 		"finished_lab:", student.finished_lab, "\n")
+  for student in students:
+    # ADD YOUR CODE HERE TO PRINT THE STUDENT VALUE
 
 
 # ## Part 2: Deleting an entry
-
-# delete_example = session.query(Student).\
-# filter_by(name = "Best Student").one()
-
-# session.delete(delete_example)
-
-# session.commit()
+# ADD CODE HERE
 
 # ## Part 3: Updating an entry
+# ADD CODE HERE
 
-# update_example = session.query(Student).\
-# filter_by(finished_lab = None).all()
-
-# for example in update_example:
-# 	example.year = 2	
-# 	example.finished_lab = False
-
-# session.commit()
-
+show_all_the_students()
