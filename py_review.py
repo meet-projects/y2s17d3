@@ -1,12 +1,11 @@
 class Student:
 	def __init__(self, name, year):
-		self.name = name
-		self.year = year	
+		self.name         = name
+		self.year         = year	
 		self.finished_lab = False
-		self.focus = Falsee	
 
 	def __repr__(self):
-		return '<Student(name = %s, finished_lab = %s, focus = %s)>' %	(self.name, self.finished_lab, self.focus)
+		return '<Student(name = %s, finished_lab = %s)>' %	(self.name, self.finished_lab)
 
 	def get_name(self):
 		return self.name
@@ -26,12 +25,4 @@ class Student:
 			return "Student finished lab"
 		else:
 			return "Student already finished"
-
-	def focus(self):
-		if self.focus:
-			return "Student is already focused"
-		else:
-			self.focus = True
-			return "Student is now focused"
-
 			

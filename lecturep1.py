@@ -1,21 +1,22 @@
-from py_review import *
+from py_review import Student
 
-student_example = Student("sample student", 1)
+# Make 2 instances of Student class with both 
+# of your names and years
+# ADD CODE HERE
+student1 =
+student2 =
 
-student_example
 
-print(student_example.get_name())
+# get both students names and years and print them
+# ADD CODE HERE
 
-student_example.set_name("INSERT NAME HERE")
+# Change the names and the years of student1 and student2
+# ADD CODE HERE
 
-print(student_example.get_name())
 
-student_example.set_year(2)
+# get the new students names and years and print them
+# ADD CODE HERE
 
-print(student_example.get_year())
 
-print(student_example.finish_lab())
-
-print(student_example.finish_lab())
-
-print(student_example.focus())
+# Once you are done, call the finish_lab method to finish the lab and print the return value
+# ADD CODE HERE 
