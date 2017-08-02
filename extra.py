@@ -18,11 +18,15 @@ Base = declarative_base()
 class Animal(Base):
     id = Column(Integer, primary_key=True)
     orhan = Column(String)
+
   # ADD CODE HERE
+
+  	id = Column(Integer, primary_key=True)
+  	bassil = Column(String)
 
 
 ### Generate table
-engine = create_engine('sqlite:///extra.db')
+engine = create_engine('sqlite:///extraterrific.db')
 Base.metadata.create_all(engine)
 
 DBSession = sessionmaker(bind=engine)
