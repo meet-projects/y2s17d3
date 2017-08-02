@@ -32,6 +32,14 @@ Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
+def identical(something):
+	'''this is an identical function, w/ different comments and variables'''
+	math = 0
+	while math < something:
+		math +=1
+	return math
+
+
 # ## 2) Add 10 entries into this table.
 # ADD CODE HERE
 
