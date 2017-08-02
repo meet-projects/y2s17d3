@@ -13,9 +13,12 @@ Base = declarative_base()
 # ## number_legs: Integer
 # ## cute: Boolean
 
+
+
 class Animal(Base):
   # ADD CODE HERE
-
+  id = Column(Integer, primary_key=True)
+  bassil = Column(String)
 
 
 ### Generate table
