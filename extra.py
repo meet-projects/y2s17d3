@@ -16,6 +16,8 @@ Base = declarative_base()
 
 
 class Animal(Base):
+    id = Column(Integer, primary_key=True)
+    orhan = Column(String)
   # ADD CODE HERE
 
 
